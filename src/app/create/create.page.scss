@@ -1,0 +1,25 @@
+ion-content{
+    --background: #d1eaff;
+}
+ion-item{
+    border: 1px solid #DADCE0;
+            border-radius: 4px;
+            width: 100%;
+    --background : rgb(255, 255, 255);
+    --color: #fff;
+}
+ion-title{
+    text-align:  center;
+}
+ion-input{
+    color: rgb(78, 78, 78);
+}
+ion-button{
+    --background: #279dfd;
+}
+.ion-text-center:hover{
+    cursor: pointer;
+}
+.bord{
+    border: 1px solid rgb(70, 70, 70);
+}

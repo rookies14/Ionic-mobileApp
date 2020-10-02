@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Activity
+    </ion-title>
+    <ion-button slot="end" routerLink="/create">Create</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+      <ion-row>
+          <ion-col *ngFor="let item of datas" size="6">
+              <ion-card href="/app/tabs/tab1/detail/{{item.Name}}">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : {{item.Name}}<br>
+                  Joined : {{item.Now}}/{{item.Max}}
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <!-- <ion-col size="6">
+              <ion-card href="/tabs/tab1/detail">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : xxxxxxxxxxxx <br>
+                  Joined : xxx/xxx
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <ion-col size="6">
+              <ion-card href="/tabs/tab1/detail">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : xxxxxxxxxxxx <br>
+                  Joined : xxx/xxx
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <ion-col size="6">
+              <ion-card href="/tabs/tab1/detail">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : xxxxxxxxxxxx <br>
+                  Joined : xxx/xxx
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <ion-col size="6">
+              <ion-card href="/tabs/tab1/detail">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : xxxxxxxxxxxx <br>
+                  Joined : xxx/xxx
+                  </ion-card-content>
+                </ion-card>
+          </ion-col>
+          <ion-col size="6">
+              <ion-card href="/tabs/tab1/detail">
+                  <img src="https://cdn.pixabay.com/photo/2015/08/25/11/18/background-906697_960_720.jpg" />
+                  <ion-card-content>
+                  Name : xxxxxxxxxxxx <br>
+                  Joined : xxx/xxx
+                  </ion-card-content>
+                </ion-card>
+          </ion-col> -->
+      </ion-row>
+  </ion-grid>
+    
+</ion-content>
+

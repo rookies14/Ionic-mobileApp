@@ -1,0 +1,28 @@
+
+ion-item{
+    border: 1px solid #DADCE0;
+    border-radius: 12px;
+    width: 100%;
+    --background : rgb(203, 255, 203);
+    --color: rgb(0, 0, 0);
+}
+.bord{
+    border: 3px solid rgb(70, 70, 70);
+}
+.button{
+    float: right;
+}
+ion-button{
+    border-radius: 10px;
+    color: #FFFFFF;
+border: solid #A1A1A1 4px;
+cursor: pointer;
+}
+ion-row{
+    width: 100%;
+}
+.ion-text-start{
+    height: 100%;
+    position: relative;
+    top:8px;
+}

@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons routerLink="../app/tabs/tab1/" slot="start">
+          <ion-icon slot="icon-only" name="arrow-round-back"></ion-icon>
+        </ion-buttons>
+    <ion-title>
+      Create Activity
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #contactForm="ngForm" (ngSubmit)="processForm(contactForm.value)">
+        <ion-row color="primary" justify-content-center>
+            <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+                <div padding>
+                  <ion-row>
+                    <ion-col>
+                      <div class="ion-text-start">Name</div>
+                        <ion-item class="bord">
+                          <ion-input name="Name" [(ngModel)]="Name" required type="text" (oninput)="handleNameValue($event)"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                </div>
+                <div padding>
+              <ion-row>
+                  <ion-col size="8">
+                    <div class="ion-text-start">Date</div>
+                        <ion-item class="bord">
+                          <ion-input name="Date" [(ngModel)]="Date" required type="text" (oninput)="handleDateValue($event)"></ion-input>
+                        </ion-item>
+                  </ion-col>
+                  <ion-col>
+                    <div class="ion-text-start">Paticipants</div>
+                      <ion-item class="bord">                  
+                        <ion-input name="Max" [(ngModel)]="Max" required type="number" (oninput)="handleMaxValue($event)"></ion-input>
+                      </ion-item>
+                    </ion-col> 
+                    
+                </ion-row>
+              </div>
+              <div padding>
+                <ion-row>
+                  <ion-col>
+                  <div class="ion-text-start">Transcript</div>
+                <ion-item class="bord">
+              <ion-input name="Transcript" [(ngModel)]="Transcript" required type="number" (oninput)="handleTranscriptValue($event)"></ion-input>
+        
+          </ion-item>
+                  </ion-col>
+                  </ion-row>
+        </div>
+        <div padding>
+          <ion-row>
+            <ion-col>
+        <div class="ion-text-start">Address</div>
+          <ion-item class="bord">
+            
+            <ion-input name="Address" [(ngModel)]="Address" required type="text" (oninput)="handleAddressValue($event)"></ion-input>
+          </ion-item>
+          </ion-col>
+          </ion-row>
+        </div>
+          <ion-item [hidden]="true">
+            <ion-label position="stacked">Now <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input name="Now" [(ngModel)]="Now" required type="number" (oninput)="handleNowValue($event)" value={{Now}}></ion-input>
+          </ion-item>
+          </ion-col>
+        </ion-row>
+        <div class="ion-padding">
+          <ion-button expand="block" type="submit" class="ion-no-margin">Confirm</ion-button>
+        </div>
+      </form>
+      
+      <!-- <script>
+          const controller = document.querySelector('ion-alert-controller');
+          let Name, Description,Location,Count;
+          function processForm(event) {
+            event.preventDefault();
+            controller.create({
+              header: 'Submit Activity',
+              message: `Created Activity ${Name} Success</b>`,
+              buttons: [{
+                text: 'OK'
+              }]
+            }).then(alert => alert.present());
+          }
+          function handleNameValue(event) {
+            Name = event.target.value;
+          }
+          function handleDescriptionValue(event) {
+            Description = event.target.value;
+          }
+          function handleLocationValue(event) {
+            Location = event.target.value;
+          }
+          function handleCountValue(event) {
+            Count = event.target.value;
+          }
+        </script> -->
+      
+</ion-content>
